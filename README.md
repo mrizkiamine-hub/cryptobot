@@ -1,4 +1,4 @@
-# Cryptobot 🚀
+# Cryptobot 
 
 ## 📌 Présentation
 Cryptobot est un projet de **data engineering** autour des marchés de cryptomonnaies.  
