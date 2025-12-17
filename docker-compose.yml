@@ -1,0 +1,22 @@
+services:
+  mongodb:
+    image: mongo:7.0
+    container_name: my_mongo
+    restart: unless-stopped
+
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: datascientest
+      MONGO_INITDB_ROOT_PASSWORD: dst123
+
+    ports:
+      - "27017:27017"
+
+    volumes:
+      # Volume de persistance MongoDB
+      - mongo_data:/data/db
+
+      # Accès direct à l'arborescence data du projet cryptobot
+      - ./data:/cryptobot_data
+
+volumes:
+  mongo_data:
